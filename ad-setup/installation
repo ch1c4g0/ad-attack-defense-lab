@@ -9,6 +9,7 @@
 
 ### Creating the VM in ProxMox ###
 - Uploaded the .iso to Node3 of my Cluster.
+
 - Checked hardware requirements, settled on 8GB, 4Cores, and 215GB.
 - Named the machine VM01-DC01(102) 
 - Booted the VM, ran into an issue "No Boot Manager Found".
@@ -25,3 +26,9 @@
 - SCSI CONTROLLER: VirtIO SCSI Single
 
 Installation completed, moving onto configuration.
+
+
+### Lessons Learned
+- Always verify the ISO before creating a VM.
+- Boot order matters: CD/DVD should be first.
+- For first lab builds, SeaBIOS + SATA/IDE disks avoids VirtIO driver issues.
