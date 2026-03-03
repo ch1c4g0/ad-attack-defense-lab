@@ -1,1 +1,27 @@
 
+# AD Lab Installation Log
+
+## Step 1: Install Windows Server
+- Version: Windows Server 2022 (Desktop Experience)
+- Role: Domain Controller
+- IP: 192.168.1.235
+- Notes: Chose GUI Experience as this is my first time configuring Windows Server.
+
+### Creating the VM in ProxMox ###
+- Uploaded the .iso to Node3 of my Cluster.
+- Checked hardware requirements, settled on 8GB, 4Cores, and 215GB.
+- Named the machine VM01-DC01(102) 
+- Booted the VM, ran into an issue "No Boot Manager Found".
+- Shutdown VM
+- Initial thoughts is incorrect boot-order as this is common for Windows VM's in Proxmox
+- Rearranged boot-order Ide0 (the alloted 215GB) was first in boot-order so I moved Ide2 up.
+- This actually ended being a whole mess, I had to delete the VM and reconfigure it probably 4 times till I figured out my .iso was corrupted...
+
+#### Finalized Hardware ####
+- RAM: 8GB
+- CORES: 4
+- DRIVE SIZE: 215
+- SEA BIOS
+- SCSI CONTROLLER: VirtIO SCSI Single
+
+Installation completed, moving onto configuration.
