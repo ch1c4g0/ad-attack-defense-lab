@@ -1,0 +1,23 @@
+
+#### Notes from official Microsoft Documentation on Active Directory ####
+
+### https://learn.microsoft.com/en-us/training/modules/introduction-to-ad-ds/2-define-ad-ds ###
+
+
+
+#### What is the purpose of AD DS? ####
+
+- Provides a central store of domain objects, such as user accounts, computer accounts, and groups.
+  - AD DS provides a hierachical directory and a method for applying configuration and security settings for objects in enterprise environments
+
+#### What are the logical components of AD DS? ####
+
+- Partitions: A partition / Naming context is a portion of the AD DS database. The DB consists of one file named "Ntds.dit", with different partitions
+  containing different data.
+    - i.e
+        - The Schema partition contains a copy of the AD Schema. 
+            - What is a Schema?: A schema is a set of definitions of the object types and attributes you use to define the objects created in AD.
+
+        - The Configuration Partition: Contains configuration objects for the forest
+            - Configuration Objects: Data instances stored within the AD Database. Defines the structure, services, and topology of the forest.
+                - Contains components like: Domain controllers and sites, logical settings like Group Policy Objects (GPO) and application data.
