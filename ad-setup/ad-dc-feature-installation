@@ -1,0 +1,35 @@
+
+#### I want to prephase that this is my first time fully configuring DC, I am super excited.
+I am going to use this opportunity to dig-deep and learn as much as I can ####
+
+#### I had no Idea where to start when doing this, naturally I turend to Youtube. ####
+
+#### STEP 1: Installing Features ####
+- Navigated to Server Manager -- Manage -- Add Roles and Features
+- Installed AD DC
+- Installed AD LDAP
+- Installed DNS Server
+- Added .Net3.5 and .Net4.8 features
+
+#### STEP 2: Promote Server to Domain Controller ####
+  
+### I just followed the prompts listed below ###
+  
+- Deployement Configuration: Add a new forest
+  - Domain: chicago.local
+  
+-Domain Controller Options: 
+  - Forest Function Level: Windows Server 2016
+  - Specify Controller Capabilities: Domai Name System (DNS) Server, Global Catalog(GC) 
+  - Set Directory Services Restore Mode (DRSM) password
+  
+- DNS Options:
+  - Skipped Delegation as I was not familiar (going to address this ignorance later)
+
+-NetBIOS Domain Name: Chicago
+  
+-Paths: Used default paths
+
+
+
+
