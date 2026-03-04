@@ -21,3 +21,7 @@
         - The Configuration Partition: Contains configuration objects for the forest
             - Configuration Objects: Data instances stored within the AD Database. Defines the structure, services, and topology of the forest.
                 - Contains components like: Domain controllers and sites, logical settings like Group Policy Objects (GPO) and application data.
+
+        - Domain Tree: A hierarchical collection of domains that share a root domain and a continguous(bordering) namespace.
+
+        - Forest: A collection of one or more domains that have a common AD DS root, a common schema, and a global catalog.
